@@ -6,15 +6,12 @@ public class Main {
 
     public static void main(String[] args) {
         LinkedList lista1 = new LinkedList();
-        Node node = new Node();
 
         lista1.add(1);
-        lista1.add(1);
-        lista1.add(1);
-        lista1.add(1);
+        lista1.add(4);
+        lista1.add(3);
+        lista1.add(7);
 
-        lista1.delete(1);
-
-        int dato = lista1.get(4);
+        System.out.println("el tamaño es: " + lista1.getSize());
     }
 }
