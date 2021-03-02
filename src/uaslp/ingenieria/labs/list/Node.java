@@ -13,8 +13,8 @@ class Node {
         return data;
     }
 
-    public void setData(int dato) {
-        this.data = dato;
+    public void setData(int data) {
+        this.data = data;
     }
 
     public Node getPrevious() {
