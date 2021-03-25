@@ -1,4 +1,3 @@
-
 package uaslp.ingenieria.labs.list;
 
 import static uaslp.ingenieria.labs.list.Position.AFTER;
