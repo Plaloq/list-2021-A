@@ -1,6 +1,6 @@
 package uaslp.ingenieria.labs.list;
 
-public interface List<T> {
+public interface List <T> {
 
     void add(T data);
 
@@ -15,5 +15,4 @@ public interface List<T> {
     void insert(T data, Position position, Iterator<T> it);
 
     Iterator<T> getReverseIterator();
-
 }
