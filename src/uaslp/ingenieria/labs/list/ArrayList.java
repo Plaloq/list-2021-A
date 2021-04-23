@@ -44,6 +44,7 @@ public class ArrayList<H> implements List<H>{
     @Override
     public void insert(H data, Position position, Iterator<H> it) {
 
+
     }
 
     @Override

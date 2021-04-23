@@ -190,6 +190,8 @@ public class LinkedList<G> implements List<G>{
         size++;
     }
 
+
+
     @Override
     public int getSize() {
         return size;
