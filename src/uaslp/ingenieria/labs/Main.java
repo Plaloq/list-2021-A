@@ -3,6 +3,7 @@ package uaslp.ingenieria.labs;
 import uaslp.ingenieria.labs.list.ArrayList;
 import uaslp.ingenieria.labs.list.Iterator;
 import uaslp.ingenieria.labs.list.List;
+import uaslp.ingenieria.labs.list.Position;
 
 public class Main {
 
@@ -25,11 +26,13 @@ public class Main {
 
         lista1.delete(4);
 
+
         System.out.println("---------------------");
 
         System.out.println("El tamaño es: " + lista1.getSize());
 
         Iterator<Integer> it = lista1.getIterator();
+
 
         while(it.hasNext()){
             int element = it.next();

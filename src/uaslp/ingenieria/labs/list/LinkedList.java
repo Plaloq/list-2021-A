@@ -63,7 +63,7 @@ public class LinkedList<G> implements List<G>{
         }
     }
 
-    public class ReverseIterator implements Iterator<G>{
+    public class ReverseIterator implements Iterator<G> {
 
         private Node<G> currentNode;
 
@@ -71,6 +71,9 @@ public class LinkedList<G> implements List<G>{
             this.currentNode = tail;
         }
 
+        public ReverseIterator(ReverseIterator iterator){
+            currentNode = iterator.currentNode;
+        }
 
         public boolean hasNext(){
             return currentNode != null;
@@ -160,6 +163,11 @@ public class LinkedList<G> implements List<G>{
         return new ForwardIterator();
     }
 
+    @Override
+    public ReverseIterator getReverseIterator() {
+        return new ReverseIterator();
+    }
+
 
     public void insert(G data, Position position, Iterator<G> it) {
 
@@ -195,10 +203,5 @@ public class LinkedList<G> implements List<G>{
     @Override
     public int getSize() {
         return size;
-    }
-
-    @Override
-    public ReverseIterator getReverseIterator() {
-        return new ReverseIterator();
     }
 }

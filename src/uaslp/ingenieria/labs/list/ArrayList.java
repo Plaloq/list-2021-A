@@ -34,17 +34,17 @@ public class ArrayList<H> implements List<H>{
     }
 
     @Override
-    public void delete(int index) {
-        for (int i = index; i < size-1; i++) {
-            array[i] = array[i + 1];
+    public void delete(int index) throws MyIndexOutOfBoundException{
+        if (size - (index + 1) >= 0) {
+            System.arraycopy(array, index + 1, array, index + 1 - 1, size - (index + 1));
+        }else {
+            throw new MyIndexOutOfBoundException();
         }
         size--;
     }
 
     @Override
     public void insert(H data, Position position, Iterator<H> it) {
-
-
     }
 
     @Override
@@ -75,16 +75,26 @@ public class ArrayList<H> implements List<H>{
         }
     }
 
-    public class ReverseIterator implements Iterator<H>{
-        private int currentIndex;
+    public class ReverseIterator implements Iterator<H> {
 
-        public boolean hasNext(){
-            return currentIndex>=0;
+        private int currentPosition;
+
+        public ReverseIterator() {
+            this.currentPosition = size-1;
         }
 
+        @Override
+        public boolean hasNext(){
+            return currentPosition >= 0;
+        }
+
+        @Override
         public H next(){
-            return (H) array[currentIndex--];
+            H data = (H) array[currentPosition];
+
+            currentPosition--;
+
+            return data;
         }
     }
-
 }
