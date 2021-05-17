@@ -76,7 +76,7 @@ public class LinkedList<G> implements List<G>{
             return currentNode != null;
         }
 
-        public G next(){
+        public G next() {
             G data = currentNode.data;
 
             currentNode = currentNode.previous;

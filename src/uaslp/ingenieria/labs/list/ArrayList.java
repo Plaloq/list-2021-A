@@ -11,16 +11,16 @@ public class ArrayList<H> implements List<H>{
 
     @Override
     public void add(H data) {
-        if(size == array.length){
+        if (size == array.length) {
             Object arrayAux[] = new Object[array.length + 2];
 
-            for(int i = 0; i < array.length; i++){
+            for (int i = 0; i < array.length; i++) {
                 arrayAux[i] = array[i];
             }
 
             this.array = new Object[arrayAux.length];
 
-            for(int i = 0; i < array.length; i++){
+            for (int i = 0; i < array.length; i++) {
                 array[i] = arrayAux[i];
             }
         }

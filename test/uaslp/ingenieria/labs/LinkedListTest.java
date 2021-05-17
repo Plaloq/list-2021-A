@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest {
     @Test
-    public void whenLinkedListCreate_thenSizeisZero(){
+    public void whenLinkedListCreate_thenSizeisZero() {
         //Inicializacion
         LinkedList<Integer> list = new LinkedList<>();
 
@@ -24,8 +24,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenANewLinkedList_whenAdd_ThenSizeIsOne()
-    {
+    public void givenANewLinkedList_whenAdd_ThenSizeIsOne() {
         //Inicializacion
         LinkedList<Integer> list = new LinkedList<>();
         //Ejecucion
@@ -35,8 +34,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenA5ElementsLinkedList_whenDelete_thenSizeIsFour()
-    {
+    public void givenA5ElementsLinkedList_whenDelete_thenSizeIsFour() {
         //Inicializacion
         LinkedList<Integer> list = new LinkedList<>();
 
@@ -52,8 +50,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenAListWith5Elements_whenIterator_thenAllElementsAreAccessible()
-    {
+    public void givenAListWith5Elements_whenIterator_thenAllElementsAreAccessible() {
         //Inicializacion
         LinkedList<Integer> list = new LinkedList<>();
 
@@ -79,8 +76,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenAListWith5Elements_whenInsert_thenWill6()
-    {
+    public void givenAListWith5Elements_whenInsert_thenWill6() {
         //Inicializacion
         LinkedList<Integer> list = new LinkedList<>();
 
@@ -102,7 +98,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenAnEmptyList_whenGetIterator_thenIteratorHasNextIsFalse(){
+    public void givenAnEmptyList_whenGetIterator_thenIteratorHasNextIsFalse() {
         //Inicializacion
         LinkedList<Integer> list = new LinkedList<>();
         //Ejecucion
