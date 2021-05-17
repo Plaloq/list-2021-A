@@ -1,9 +1,6 @@
 package uaslp.ingenieria.labs;
 
-import uaslp.ingenieria.labs.list.ArrayList;
-import uaslp.ingenieria.labs.list.Iterator;
-import uaslp.ingenieria.labs.list.List;
-import uaslp.ingenieria.labs.list.Position;
+import uaslp.ingenieria.labs.list.*;
 
 public class Main {
 

@@ -3,10 +3,8 @@ package uaslp.ingenieria.labs;
 import org.junit.jupiter.api.Test;
 import uaslp.ingenieria.labs.list.ArrayList;
 import uaslp.ingenieria.labs.list.Iterator;
-import uaslp.ingenieria.labs.list.MyIndexOutOfBoundException;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.assertj.core.api.AssertionsForClassTypes.catchThrowable;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ArrayListTest {

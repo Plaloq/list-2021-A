@@ -32,9 +32,6 @@ public class LinkedList<G> implements List<G>{
         return listsCount;
     }
 
-
-
-
     public class ForwardIterator implements Iterator<G> {
         private Node<G> currentNode;
 
@@ -120,42 +117,39 @@ public class LinkedList<G> implements List<G>{
     }
 
     @Override
-    public void delete(int index) {
+    public void delete(int index) throws IndexOutOfBoundsException{
         Node<G> currentNode = head;
         int currentIndex = 0;
 
-        if (index < 0 || index >= size) {
-            return;
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
         }
-
         size--;
 
-        if (size == 0) {
+        if(size == 0){
             head = null;
             tail = null;
             return;
         }
 
-        if (index == 0) {
+        if(index == 0){
             head = head.next;
             head.previous = null;
         }
 
-        if (index == size) {
+        if(index == size){
             tail = tail.previous;
             tail.next = null;
         }
 
-        if (index > 0 && index < size) {
-            while (currentIndex < index) {
+        if(index > 0 && index < size){
+            while(currentIndex < index){
                 currentNode = currentNode.next;
                 currentIndex++;
             }
             currentNode.previous.next = currentNode.next;
             currentNode.next.previous = currentNode.previous;
         }
-
-
     }
 
     @Override
